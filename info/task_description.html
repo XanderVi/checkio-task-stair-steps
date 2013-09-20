@@ -1,39 +1,37 @@
 <p>
-    <i>( Describe task in general )</i>
-</p>
-
-<p>
-    Sum two passed ints
+    There is a staircase with N stair-steps and two platforms - one at the beginning, other at the end of stairs. On
+    every
+    step some number is written (from -100 to 100 , except 0). Zeros are written on the first and last platform. You
+    start your way on the first platform and finish it on the last one. You can move either to the next step or to the
+    next plus one. Find the best path to maximize the sum of numbers on the stairs on your way and return the final
+    sum.
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <img class="for_info_only" title="stair-steps" src="{{MEDIA}}stair-steps.png" alt="stair-steps" width="450px"/>
+    <img class="for_editor_only" title="stair-steps" src="{{MEDIA}}stair-steps.png" alt="stair-steps" width="380px"/>
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Input: </strong> Numbers on the stairs. A list of integers.
 </p>
 
+<p>
+    <strong>Output: </strong> The final sum for the best way. An integer.
+</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <pre class="brush: python">checkio([5, -3, -1, 2]) == 6
+checkio([5, 6, -10, -7, 4]) == 8
+checkio([-11, 69, 77, -51, 23, 67, 35, 27, -25, 95]) == 393
+checkio([-21, -23, -69, -67, 1, 41, 97, 49, 27]) == 125</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    Optimization Software.
 </p>

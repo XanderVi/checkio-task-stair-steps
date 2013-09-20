@@ -37,3 +37,6 @@ nosetests.xml
 
 .DS_Store
 __VERSION__.py
+
+generate.py
+

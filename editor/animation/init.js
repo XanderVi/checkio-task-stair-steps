@@ -108,34 +108,39 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 y0 = 10,
                 cellSize = 30;
             var cellN;
-            var fullSize;
+            var fullSizeX;
+            var fullSizeY;
             var paper;
+            var kUp = 0.2;
+            var kPad = 0.1;
 
             var attrEdgeStep = {"stroke": colorGrey4, "stroke-width": 6, "stroke-linecap": "round"};
             var attrStep = {"stroke": colorGrey4, "stroke-width": 3, "stroke-linecap": "round"};
+            var attrRoute = {"stroke": colorOrange4, "stroke-width": 3, "stroke-linecap": "round", "arrow-end": "classic-midium-long"};
             var attrNumb = {"stroke": colorBlue4, "font-size": cellSize * 0.5, "font-family": "Verdana"};
 
             this.createCanvas = function(numbers, route) {
                 cellN = numbers.length;
-                fullSize = x0 * 2 + cellSize * (numbers.length + 2);
-                paper = Raphael(dom, fullSize, fullSize, 0, 0);
+                fullSizeX = x0 * 2 + cellSize * (numbers.length + 2);
+                fullSizeY = fullSizeX + cellSize;
+                paper = Raphael(dom, fullSizeX, fullSizeY, 0, 0);
 
                 paper.path(Raphael.format(
                     "M{0},{1}H{2}",
                     x0,
-                    fullSize - y0 - cellSize,
+                    fullSizeY - y0 - cellSize,
                     x0 + cellSize
                     )).attr(attrEdgeStep);
                 paper.text(
                     x0 + cellSize / 2,
-                    fullSize - (y0 + cellSize / 2),
+                    fullSizeY - (y0 + cellSize / 2),
                     "0"
                     ).attr(attrNumb);
                 paper.path(Raphael.format(
                     "M{0},{1}H{2}",
                     x0 + (cellN + 1) * cellSize,
-                    y0,
-                    fullSize - x0
+                    y0 + cellSize,
+                    fullSizeX - x0
                     )).attr(attrEdgeStep);
                 // paper.text(
                 //     x0 + (cellN + 0.5) * cellSize,
@@ -147,20 +152,40 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                     paper.path(Raphael.format(
                         "M{0},{1}V{2}",
                         x0 + cellSize + cellSize * i,
-                        fullSize - (y0 + cellSize + cellSize * i),
-                        fullSize - (y0 + cellSize * (i + 2))
+                        fullSizeY - (y0 + cellSize + cellSize * i),
+                        fullSizeY - (y0 + cellSize * (i + 2))
                         )).attr(attrStep);
                     paper.path(Raphael.format(
                         "M{0},{1}H{2}",
                         x0 + (i + 1) * cellSize,
-                        fullSize - (y0 + cellSize * (i + 2)),
+                        fullSizeY - (y0 + cellSize * (i + 2)),
                         x0 + (i + 2) * cellSize
                         )).attr(attrStep);
                     paper.text(
                         x0 + (i + 1.6) * cellSize,
-                        fullSize - (y0 + cellSize * (i + 1.5)),
+                        fullSizeY - (y0 + cellSize * (i + 1.5)),
                         numbers[i]
                         ).attr(attrNumb);
+                }
+                route.push(1);
+                route.unshift(1);
+                var stPoint = [x0 + cellSize / 2, fullSizeY - (y0 + cellSize * (1 + kUp))];
+                var endPoint;
+                for (i = 1; i < route.length; i++) {
+                    if (route[i] === 0) {
+                        continue;
+                    }
+                    endPoint = [x0 + cellSize * (i + 0.5), fullSizeY - (y0 + cellSize * (i + 1 + kUp))];
+                    paper.path(Raphael.format(
+                        "M{0},{1}C{0},{4},{2},{5},{2},{3}",
+                        stPoint[0] + cellSize * kPad,
+                        stPoint[1],
+                        endPoint[0] - cellSize * kPad,
+                        endPoint[1],
+                        endPoint[1] - cellSize * (2 - kUp),
+                        endPoint[1] - cellSize * (1 - kUp)
+                        )).attr(attrRoute);
+                    stPoint = endPoint;
                 }
             };
         }

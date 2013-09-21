@@ -177,7 +177,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 for (i = 0; i < route.length; i++) {
                     newRoute.push(route[i]);
                 }
-                newRoute.push[1];
+                newRoute.push(1);
                 var stPoint = [x0 + cellSize / 2, fullSizeY - (y0 + cellSize * (1 + kUp))];
                 var endPoint;
                 for (i = 1; i < newRoute.length; i++) {

@@ -142,13 +142,13 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                     y0 + cellSize,
                     fullSizeX - x0
                     )).attr(attrEdgeStep);
-                // paper.text(
-                //     x0 + (cellN + 0.5) * cellSize,
-                //     y0 + cellSize / 2,
-                //     "0"
-                //     ).attr(attrNumb);
-                numbers.push(0);
-                for (var i = 0; i <= cellN; i++) {
+                paper.text(
+                    x0 + (cellN + 1.5) * cellSize,
+                    y0 + cellSize * 1.5,
+                    "0"
+                    ).attr(attrNumb);
+
+                for (var i = 0; i < cellN; i++) {
                     paper.path(Raphael.format(
                         "M{0},{1}V{2}",
                         x0 + cellSize + cellSize * i,
@@ -167,6 +167,12 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         numbers[i]
                         ).attr(attrNumb);
                 }
+                paper.path(Raphael.format(
+                    "M{0},{1}V{2}",
+                    x0 + cellSize + cellSize * i,
+                    fullSizeY - (y0 + cellSize + cellSize * i),
+                    fullSizeY - (y0 + cellSize * (i + 2))
+                    )).attr(attrStep);
                 route.push(1);
                 route.unshift(1);
                 var stPoint = [x0 + cellSize / 2, fullSizeY - (y0 + cellSize * (1 + kUp))];

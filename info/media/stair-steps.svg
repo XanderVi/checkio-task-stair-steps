@@ -8,7 +8,7 @@
     <text transform="matrix(0.707, -0.707, 0.707, 0.707, 444.171, 324.5)">
       <tspan x="-420.3" y="11.5" font-family="Verdana-Bold" font-size="30" fill="#294270">checkio([-21,-23,-69,-67,1,41,97,49,27]) == 125</tspan>
     </text>
-    <text transform="matrix(0.707, -0.707, 0.707, 0.707, 188.784, 177.147)">
+    <text transform="matrix(0.707, -0.707, 0.707, 0.707, 188.784, 167.147)">
       <tspan x="-232.024" y="11.5" font-family="Verdana-Bold" font-size="30" fill="#294270">checkio([5,-3,-1,2]) == 6</tspan>
     </text>
     <path d="M58.609,420.12 L117.982,419.731" fill-opacity="0" stroke="#737370" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -99,8 +99,8 @@
       <path d="M137.732,334.571 L131.451,331.028 L138.623,346.538 L143.418,330.137 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
-      <path d="M155.5,349.5 C155.5,189.049 249.293,136.266 259.586,214.538" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
-      <path d="M259.586,214.538 L253.354,210.911 L260.318,226.515 L265.331,210.179 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
+      <path d="M155.5,349.5 C155.5,141.577 242.061,167.781 257.995,214.786" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M257.995,214.786 L251.409,211.85 L260.009,226.616 L263.239,209.836 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
       <path d="M275.5,229.5 C275.5,86.804 307.333,112.444 315.484,154.622" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>

@@ -173,12 +173,15 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                     fullSizeY - (y0 + cellSize + cellSize * i),
                     fullSizeY - (y0 + cellSize * (i + 2))
                     )).attr(attrStep);
-                route.push(1);
-                route.unshift(1);
+                var newRoute = [1];
+                for (i = 0; i < route.length; i++) {
+                    newRoute.push(route[i]);
+                }
+                newRoute.push[1];
                 var stPoint = [x0 + cellSize / 2, fullSizeY - (y0 + cellSize * (1 + kUp))];
                 var endPoint;
-                for (i = 1; i < route.length; i++) {
-                    if (route[i] === 0) {
+                for (i = 1; i < newRoute.length; i++) {
+                    if (newRoute[i] === 0) {
                         continue;
                     }
                     endPoint = [x0 + cellSize * (i + 0.5), fullSizeY - (y0 + cellSize * (i + 1 + kUp))];

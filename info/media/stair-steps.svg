@@ -95,16 +95,16 @@
       <tspan x="-14.219" y="11.5" font-family="Verdana-Bold" font-size="36" fill="#294270">0</tspan>
     </text>
     <g>
-      <path d="M89.241,410.267 C89.241,257.618 129.345,290.736 137.432,334.589" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
-      <path d="M137.432,334.589 L131.082,331.172 L138.563,346.536 L143.029,330.042 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
+      <path d="M89.241,410.267 C85.878,257.638 129.994,290.727 137.732,334.571" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M137.732,334.571 L131.451,331.028 L138.623,346.538 L143.418,330.137 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
       <path d="M155.5,349.5 C155.5,189.049 249.293,136.266 259.586,214.538" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
       <path d="M259.586,214.538 L253.354,210.911 L260.318,226.515 L265.331,210.179 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
-      <path d="M275.5,229.5 C275.5,80.022 307.881,117.021 315.621,154.621" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
-      <path d="M315.621,154.621 L309.217,151.306 L316.941,166.549 L321.144,149.986 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
+      <path d="M275.5,229.5 C275.5,86.804 307.333,112.444 315.484,154.622" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M315.484,154.622 L309.05,151.364 L316.912,166.536 L320.965,149.936 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
       <path d="M335.5,169.5 C335.5,19.98 377.187,56.221 387.13,93.636" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
@@ -119,12 +119,12 @@
       <path d="M372.719,516.212 L366.174,513.186 L374.571,528.069 L378.03,511.335 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
-      <path d="M395.5,530.5 C395.5,370.059 482.706,317.064 492.286,395.291" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
-      <path d="M492.286,395.291 L486.069,391.638 L492.967,407.272 L498.049,390.957 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
+      <path d="M395.5,530.5 C395.5,323.129 474.87,351.501 490.488,395.566" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M490.488,395.566 L483.874,392.694 L492.617,407.376 L495.684,390.565 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
-      <path d="M515.5,410.267 C515.5,260.809 550.377,297.183 558.722,334.636" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
-      <path d="M558.722,334.636 L552.289,331.377 L560.147,346.551 L564.205,329.952 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
+      <path d="M515.5,410.267 C515.5,257.638 551.873,290.727 559.217,334.571" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M559.217,334.571 L552.896,331.1 L560.244,346.527 L564.852,330.072 z" fill="#F0801A" fill-opacity="1" stroke="#F0801A" stroke-width="6" stroke-opacity="1"/>
     </g>
     <g>
       <path d="M575.5,349.5 C575.5,200.001 610.397,237.031 618.729,274.637" fill-opacity="0" stroke="#F0801A" stroke-width="6" stroke-linecap="round"/>

@@ -76,14 +76,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.answer').remove();
             }
             //Dont change the code before it
-
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var canvas = new StairCanvas($content.find(".explanation")[0]);
+            canvas.createCanvas(checkioInput, explanation);
 
 
             this_e.setAnimationHeight($content.height() + 60);
@@ -108,11 +102,68 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         var colorGrey1 = "#EBEDED";
 
         var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
+        
+        function StairCanvas(dom){
+            var x0 = 10,
+                y0 = 10,
+                cellSize = 30;
+            var cellN;
+            var fullSize;
+            var paper;
 
+            var attrEdgeStep = {"stroke": colorGrey4, "stroke-width": 6, "stroke-linecap": "round"};
+            var attrStep = {"stroke": colorGrey4, "stroke-width": 3, "stroke-linecap": "round"};
+            var attrNumb = {"stroke": colorBlue4, "font-size": cellSize * 0.5, "font-family": "Verdana"};
+
+            this.createCanvas = function(numbers, route) {
+                cellN = numbers.length;
+                fullSize = x0 * 2 + cellSize * (numbers.length + 2);
+                paper = Raphael(dom, fullSize, fullSize, 0, 0);
+
+                paper.path(Raphael.format(
+                    "M{0},{1}H{2}",
+                    x0,
+                    fullSize - y0 - cellSize,
+                    x0 + cellSize
+                    )).attr(attrEdgeStep);
+                paper.text(
+                    x0 + cellSize / 2,
+                    fullSize - (y0 + cellSize / 2),
+                    "0"
+                    ).attr(attrNumb);
+                paper.path(Raphael.format(
+                    "M{0},{1}H{2}",
+                    x0 + (cellN + 1) * cellSize,
+                    y0,
+                    fullSize - x0
+                    )).attr(attrEdgeStep);
+                // paper.text(
+                //     x0 + (cellN + 0.5) * cellSize,
+                //     y0 + cellSize / 2,
+                //     "0"
+                //     ).attr(attrNumb);
+                numbers.push(0);
+                for (var i = 0; i <= cellN; i++) {
+                    paper.path(Raphael.format(
+                        "M{0},{1}V{2}",
+                        x0 + cellSize + cellSize * i,
+                        fullSize - (y0 + cellSize + cellSize * i),
+                        fullSize - (y0 + cellSize * (i + 2))
+                        )).attr(attrStep);
+                    paper.path(Raphael.format(
+                        "M{0},{1}H{2}",
+                        x0 + (i + 1) * cellSize,
+                        fullSize - (y0 + cellSize * (i + 2)),
+                        x0 + (i + 2) * cellSize
+                        )).attr(attrStep);
+                    paper.text(
+                        x0 + (i + 1.6) * cellSize,
+                        fullSize - (y0 + cellSize * (i + 1.5)),
+                        numbers[i]
+                        ).attr(attrNumb);
+                }
+            };
+        }
 
     }
 );

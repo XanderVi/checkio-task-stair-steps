@@ -39,6 +39,7 @@ checkio([-21, -23, -69, -67, 1, 41, 97, 49, 27]) == 125</pre>
 
 
 <p>
-    <strong>Precondition:</strong>0 < |steps| &le; 10<br>
-    &forall; x ∈ steps : -100 <; x < 100; x != 0
+    <strong>Precondition:</strong><br>
+    0 &lt; len(steps) &le; 10<br>
+    all(-100 &lt; x &lt; 100 and x for x in steps)
 </p>

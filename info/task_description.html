@@ -25,10 +25,21 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">checkio([5, -3, -1, 2]) == 6
-checkio([5, 6, -10, -7, 4]) == 8
-checkio([-11, 69, 77, -51, 23, 67, 35, 27, -25, 95]) == 393
-checkio([-21, -23, -69, -67, 1, 41, 97, 49, 27]) == 125</pre>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+stair([5, -3, -1, 2]) == 6
+stair([5, 6, -10, -7, 4]) == 8
+stair([-11, 69, 77, -51, 23, 67, 35, 27, -25, 95]) == 393
+stair([-21, -23, -69, -67, 1, 41, 97, 49, 27]) == 125
+</pre>
+{% else %}
+<pre class="brush: python">
+stair([5, -3, -1, 2]) == 6
+stair([5, 6, -10, -7, 4]) == 8
+stair([-11, 69, 77, -51, 23, 67, 35, 27, -25, 95]) == 393
+stair([-21, -23, -69, -67, 1, 41, 97, 49, 27]) == 125
+</pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">
